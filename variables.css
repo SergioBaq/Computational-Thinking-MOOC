@@ -1,0 +1,89 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+  /* Estilo para el encabezado */
+  header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+/* Estilos para secciones de conceptos */
+.concepto {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    /*responsive*/
+    overflow: hidden;
+    
+}
+
+.concepto h2 {
+    font-size: 24px;
+}
+
+.concepto p {
+    font-size: 16px;
+}
+
+.concepto ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.concepto ul li {
+    font-size: 16px;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.image-container img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+}
+
+/* Estilo para el contenedor del simulador */
+.video-container {
+    position: relative;
+    padding-bottom: 115%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    border: none;
+    margin-bottom: 0px;
+}
+

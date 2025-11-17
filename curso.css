@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fondo de la página */
+    color: #333; /* Color de texto principal */
+  }
+  
+  header {
+    background-color: #0440c9; /* Cambia el color de fondo del encabezado a #0440c9 */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase; /* Texto en mayúsculas */
+  }
+  
+  /* Estilos para las secciones */
+  div {
+    padding: 40px;
+    text-align: left;
+    background-color: #fff; /* Fondo de las secciones */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para las secciones */
+    margin: 20px;
+    border: 3px solid #0440c9; /* Borde azul para la primera sección */
+  }
+  
+  /* Borde específico para la segunda sección */
+  #Condicionales {
+    border: 3px solid #f6a625; /* Borde naranja para la segunda sección */
+  }
+  
+  /* Borde específico para la tercera sección */
+  #Variables {
+    border: 3px solid #64b5f6; /* Borde azul claro para la tercera sección */
+  }
+  
+  /* Borde específico para la cuarta sección */
+  #Bucles {
+    border: 3px solid #ff3d00; /* Borde rojo para la cuarta sección */
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Color del título de la sección */
+  }
+  
+  ul {
+    text-align: left;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #0440c9; /* Cambia el color del botón a #0440c9 */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #f6a625; /* Cambia el color al pasar el mouse */
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    background-color: #0440c9; /* Cambia el color del pie de página a #0440c9 */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  header h1 {
+    font-size: 48px; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 10px; /* Espacio inferior reducido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    color: #fff; /* Cambia el color del texto del encabezado */
+    text-transform: uppercase;
+  }

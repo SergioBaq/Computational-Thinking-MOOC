@@ -1,6 +1,6 @@
 /* Reset some default styles */
 body {
-    background-image: url('https://2.bp.blogspot.com/-kIo1104xnb4/W6P5IVICYzI/AAAAAAAACZo/bErWd0uiwNESEZDvt2c4q2nLR_kWumfSQCLcBGAs/s640/pensamiento-computacional.png');
+    background-image: url('https://th.bing.com/th/id/OIG.e.W058x0KbMtFZD7wjFL?pid=ImgGn');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,29 +12,34 @@ body {
 
 /* Style the header */
 header {
-    background-image: url('https://www.infobae.com/new-resizer/Q0-iuBxb8OF9ZArKECQEKoSKcog=/arc-anglerfish-arc2-prod-infobae/public/OGVDYY4EORAUFKGOBMKIJG3CVE.jpg');
+    background-image: url('https://th.bing.com/th/id/OIG.tlzDPBPHXEwo4vVe07hu?pid=ImgGn');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 200px 0; /* Aumenta el padding para hacer más alto el encabezado */
+    padding: 100px 0; /* Reducido el padding para hacer más compacto el encabezado */
     position: relative;
 }
 
 header h1 {
-    font-size: 36px;
-    background-color: #007BFF; /* Color de fondo azul */
+    font-size: 24px;
+    background-color: #007BFF;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    color: white; /* Color de texto blanco */
+    color: white;
+    text-transform: uppercase;
 }
 
 /* Ajusta el color del fondo del menú de navegación */
 header nav {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 header nav ul {
@@ -62,7 +67,7 @@ header nav ul li a:hover {
 
 /* Style the main content */
 main {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo principal semi-transparente */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -85,13 +90,22 @@ main section ul {
     padding: 0;
 }
 
+/* Cambia los colores de fondo de las cajas */
+main section ul li {
+    background-color: whitesmoke;
+}
+
+/* Agrega un borde de color diferente a los elementos dentro de la sección */
+main section ul li {
+    border: 2px solid red;
+}
+
 main section ul li {
     flex-basis: calc(50% - 20px);
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #0440c9; /* Nuevo color de fondo azul */
     border-radius: 5px;
-    color: white;
+    color: #333;
     box-sizing: border-box;
 }
 
@@ -120,28 +134,26 @@ main p:last-child {
     font-style: italic;
     margin-top: 20px;
 }
-.cambio-color {
-    color: #0440c9;
-}
+
 /* Style the footer */
 footer {
-    background-color: #0440c9; /* Color de fondo verde */
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
-/* Agrega un efecto de hover para los botones */
-main section ul li button {
-    background-color: #FF5722; /* Color de botón naranja */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.centered-image {
+    display: block;
+    margin: 20px auto; /* Centra la imagen en todos los tamaños de pantalla */
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    height: auto;
 }
 
-main section ul li button:hover {
-    background-color: #FF7043; /* Color de botón naranja más claro al pasar el mouse */
+.cambio-color {
+    color: orange;
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center; /* Centra el texto en todos los tamaños de pantalla */
+    margin: 20px auto; /* Ajusta el margen para centrar en todos los tamaños de pantalla */
 }
