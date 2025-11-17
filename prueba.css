@@ -1,0 +1,159 @@
+/* Reset some default styles */
+body {
+    background-image: url('https://th.bing.com/th/id/OIG.e.W058x0KbMtFZD7wjFL?pid=ImgGn');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Style the header */
+header {
+    background-image: url('https://th.bing.com/th/id/OIG.tlzDPBPHXEwo4vVe07hu?pid=ImgGn');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0; /* Reducido el padding para hacer más compacto el encabezado */
+    position: relative;
+}
+
+header h1 {
+    font-size: 24px;
+    background-color: #007BFF;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Ajusta el color del fondo del menú de navegación */
+header nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Color de enlace azul */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FF5722; /* Color de enlace naranja al pasar el mouse */
+}
+
+/* Style the main content */
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+main section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+main section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cambia los colores de fondo de las cajas */
+main section ul li {
+    background-color: whitesmoke;
+}
+
+/* Agrega un borde de color diferente a los elementos dentro de la sección */
+main section ul li {
+    border: 2px solid red;
+}
+
+main section ul li {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+main section ul li:nth-child(3),
+main section ul li:nth-child(4) {
+    flex-basis: calc(50% - 20px);
+}
+
+main section ul li:nth-child(5),
+main section ul li:nth-child(6) {
+    flex-basis: 100%;
+}
+
+main section ul li h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main section ul li p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the quote at the end */
+main p:last-child {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.centered-image {
+    display: block;
+    margin: 20px auto; /* Centra la imagen en todos los tamaños de pantalla */
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    height: auto;
+}
+
+.cambio-color {
+    color: orange;
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center; /* Centra el texto en todos los tamaños de pantalla */
+    margin: 20px auto; /* Ajusta el margen para centrar en todos los tamaños de pantalla */
+}

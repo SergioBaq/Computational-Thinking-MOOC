@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  background-color: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Estilos para las secciones */
+section {
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  border: 2px solid #ddd; /* Añade un borde a cada sección */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 30px; /* Ajusta el tamaño del texto en párrafos */
+  color: #555;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los conceptos, prácticas y perspectivas */
+#conceptos {
+  background-color: white;
+  border-color: #f6a625; /* Cambia el color del borde */
+}
+
+#practicas {
+  background-color: white;
+  border-color: #007BFF;
+}
+
+#perspectivas {
+  background-color: white;
+  border-color: greenyellow;
+}
+
+/* Estilos para el encabezado */
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+header p {
+  font-size: 24px; /* Ajusta el tamaño del texto en el párrafo debajo del encabezado */
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el menú de navegación */
+
+
+ul {
+  color: #0440c9;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  color: #0440c9;
+  display: inline;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #0440c9;
+  font-weight: bold;
+  font-size: 20px; /* Ajusta el tamaño del texto en los enlaces */
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #f6a625;
+}
