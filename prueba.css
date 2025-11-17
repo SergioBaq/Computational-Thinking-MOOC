@@ -1,0 +1,147 @@
+/* Reset some default styles */
+body {
+    background-image: url('https://2.bp.blogspot.com/-kIo1104xnb4/W6P5IVICYzI/AAAAAAAACZo/bErWd0uiwNESEZDvt2c4q2nLR_kWumfSQCLcBGAs/s640/pensamiento-computacional.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Style the header */
+header {
+    background-image: url('https://www.infobae.com/new-resizer/Q0-iuBxb8OF9ZArKECQEKoSKcog=/arc-anglerfish-arc2-prod-infobae/public/OGVDYY4EORAUFKGOBMKIJG3CVE.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px 0; /* Aumenta el padding para hacer más alto el encabezado */
+    position: relative;
+}
+
+header h1 {
+    font-size: 36px;
+    background-color: #007BFF; /* Color de fondo azul */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white; /* Color de texto blanco */
+}
+
+/* Ajusta el color del fondo del menú de navegación */
+header nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Color de enlace azul */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FF5722; /* Color de enlace naranja al pasar el mouse */
+}
+
+/* Style the main content */
+main {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo principal semi-transparente */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+main section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+main section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main section ul li {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #0440c9; /* Nuevo color de fondo azul */
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+}
+
+main section ul li:nth-child(3),
+main section ul li:nth-child(4) {
+    flex-basis: calc(50% - 20px);
+}
+
+main section ul li:nth-child(5),
+main section ul li:nth-child(6) {
+    flex-basis: 100%;
+}
+
+main section ul li h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main section ul li p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the quote at the end */
+main p:last-child {
+    font-style: italic;
+    margin-top: 20px;
+}
+.cambio-color {
+    color: #0440c9;
+}
+/* Style the footer */
+footer {
+    background-color: #0440c9; /* Color de fondo verde */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Agrega un efecto de hover para los botones */
+main section ul li button {
+    background-color: #FF5722; /* Color de botón naranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main section ul li button:hover {
+    background-color: #FF7043; /* Color de botón naranja más claro al pasar el mouse */
+}
