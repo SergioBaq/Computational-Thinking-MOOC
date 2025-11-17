@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmico</title>
+    <link rel="stylesheet" type="text/css" href="CSS/prueba.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Programación</h1>
+        <nav><!--menu-->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dimensiones.html">Dimensiones</a></li>
+                <li><a href="Curso.html">Curso</a></li>
+                <li><a href="Diagnostico.html">Diagnostico</a></li>
+                <li><a href="Evaluacion.html">Evaluación</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main><!--Parte principal de la pagina-->
+        <section>
+            <h2>Pensamiento computacional</h2>
+            <p> Wing (2012, como se citó en Academia Colombiana De Ciencias Exactas, Físicas Y Naturales (ACCEFYN) y 
+                Asociación Colombiana de Facultades de Ingeniería (ACOFI), 2020) “El pensamiento 
+                computacional (PC) se define como el proceso mental de formular problemas y sus 
+                soluciones para representarlas de tal manera que puedan ser llevadas a cabo por un agente 
+                de procesamiento de información”</p>                
+            <h2>Habilidades del Pensamiento Computacional</h2>
+            <ul>
+                <li>
+                    <h3>Abstracción</h3>
+                    <p> Es la capacidad de simplificar un problema compilando sus partes, 
+                        reduciendo elementos o detalles innecesarios que dificulten su comprensión. La 
+                        abstracción permite, por ejemplo, que los estudiantes puedan declarar y usar 
+                        funciones al programar. (GreenTIC, 2021)</p>
+                </li>
+                <li>
+                    <h3>Descomposición</h3>
+                    <p>Es la capacidad de pensar en un problema o en un artefacto identificando el 
+                        conjunto de partes que lo componen, con el fin de comprender, desarrollar y evaluar 
+                        soluciones individuales para dichos componentes. Cuando se plantea un problema o 
+                        una situación que los(as) estudiantes deben analizar y subdividir en otros más 
+                        pequeños, se les motiva a desarrollar esta subhabilidad.(GreenTIC, 2021)
+                    </p>
+                </li>
+                <li>
+                    <h3>Reconocimiento de patrones</h3>
+                    <p>Se relaciona con la capacidad de identificar una serie de partes, similitudes y 
+                        conexiones, y de aprovechar esas características para proponer soluciones replicadas 
+                        de forma rápida y ágil. Esta subhabilidad se puede empezar a desarrollar, por 
+                        ejemplo, al invitar a los(as) estudiantes a que encuentren e identifiquen secuencias 
+                        numéricas, de colores y de gráficos, como etapa previa a la identificación de 
+                        secuencias de código repetitivas, que podrían simplificarse y hacerse más eficientes 
+                        mediante el uso de bucles o ciclos. (GreenTIC, 2021)</p>
+                </li>
+                <li>
+                    <h3>Algoritmos</h3>
+                    <p>El pensamiento algorítmico es el camino para llegar a una solución a través de 
+                        una definición clara de pasos (Csizmadia et al., 2015). De igual manera, consiste en 
+                        identificar problemas similares y aplicar la secuencia de pasos previamente definida, 
+                        para solucionar los de forma sistemática. Al crear un algoritmo y representarlo con un 
+                        pseudocódigo o mediante un diagrama de flujo, se usa esta subhabilidad. (GreenTIC, 2021)
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <p class="cambio-color">"El equipo Scratch de MIT define el Pensamiento Computacional como un 
+        conjunto de conceptos, prácticas y perspectivas que se basan en las ideas del mundo
+        de la informática. Los estudiantes al programar y compartir proyectos de Scratch
+        comienzan a desarrollarse como pensadores computacionales: aprenden conceptos 
+        básicos de computación y matemáticas, y a la vez también aprenden estrategias de
+        diseño, resolución de problemas, y otras formas de colaboración" (ScratchEd Team, 
+        2015 como se citó en Olabe et. al, 2015.)</p>
+        <img class="centered-image" src="https://th.bing.com/th/id/OIG.r1Iz3WQ9jsLvRA_ImHPv?pid=ImgGn" alt="image" >
+    <footer>
+        <p>Derechos reservados 2023</p>
+    </footer>
+    <div>Teachable Machine Image Model</div>
+<button type="button" onclick="init()">Start</button>
+<div id="webcam-container"></div>
+<div id="label-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+    // More API functions here:
+    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+    // the link to your model provided by Teachable Machine export panel
+    const URL = "https://teachablemachine.withgoogle.com/models/StwR6fbMz/";
+
+    let model, webcam, labelContainer, maxPredictions;
+
+    // Load the image model and setup the webcam
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        // load the model and metadata
+        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+        // or files from your local hard drive
+        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        // Convenience function to setup a webcam
+        const flip = true; // whether to flip the webcam
+        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        await webcam.setup(); // request access to the webcam
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        // append elements to the DOM
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+        labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < maxPredictions; i++) { // and class labels
+            labelContainer.appendChild(document.createElement("div"));
+        }
+    }
+
+    async function loop() {
+        webcam.update(); // update the webcam frame
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+
+    // run the webcam image through the image model
+    async function predict() {
+        // predict can take in an image, video or canvas html element
+        const prediction = await model.predict(webcam.canvas);
+        for (let i = 0; i < maxPredictions; i++) {
+            const classPrediction =
+                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            labelContainer.childNodes[i].innerHTML = classPrediction;
+        }
+    }
+</script>
+
+</body>
+</html>
